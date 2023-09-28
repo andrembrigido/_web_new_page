@@ -1,0 +1,1 @@
+usado para transformar uma String em um objeto ou um objeto em uma string
