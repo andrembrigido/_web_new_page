@@ -1,5 +1,40 @@
 /*-----------------------------------------------------*/
 /*--------------------Media Queries--------------------*/
 /*-----------------------------------------------------*/
-@media screen and (min-width:992px)/*tablets, laptops, desktops*/
-    {}
+@media screen and (max-width:992px)
+/*tablets, laptops, desktops*/
+    {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(68, 68, 68);
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #bodyGrid {
+        display: grid;
+        grid-template-rows: 10vh 85vh 5vh;
+
+    }
+
+    #headerGrid {
+        text-align: center;
+        color: white;
+    }
+
+    #mainGrid {
+        text-align: center;
+        color: white;
+
+    }
+
+    #footerGrid {
+        text-align: center;
+        color: white;
+    }
+}
