@@ -1,3 +1,73 @@
 /*-----------------------------------------------------*/
 /*-----------------------------------------------------*/
 /*-----------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/*-----------------------------------------------------*/
+/*---------------------GRID SECTION--------------------*/
+/*-----------------------------------------------------*/
+
+#bodyGrid {
+    display: grid;
+    grid-template-areas:
+        "headerArea"
+        "mainArea"
+        "footerArea";
+}
+
+#headerGrid {
+    grid-area: headerArea;
+}
+
+#mainGrid {
+    grid-area: mainArea;
+}
+
+#footerGrid {
+    grid-area: footerArea;
+}
+
+/*-----------------------------------------------------*/
+/*----------------------MENU BAR-----------------------*/
+/*-----------------------------------------------------*/
+
+#menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 1rem 0 1rem;
+    background-color: gray;
+}
+
+#logoMenu {
+    width: 5rem;
+}
+
+#listMenu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+#listMenu a {
+    display: block;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#btnMenu {
+    display: none;
+}
+

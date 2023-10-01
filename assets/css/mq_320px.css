@@ -10,31 +10,77 @@
         box-sizing: border-box;
     }
 
-    body {
-        background-color: rgb(68, 68, 68);
-        height: 100vh;
-        width: 100vw;
-    }
-
+    /*-----------------------------------------------------*/
+    /*---------------------GRID SECTION--------------------*/
+    /*-----------------------------------------------------*/
     #bodyGrid {
         display: grid;
-        grid-template-rows: 10vh 85vh 5vh;
-
+        grid-template-areas:
+            "headerArea"
+            "mainArea"
+            "footerArea";
     }
 
     #headerGrid {
-        text-align: center;
-        color: white;
+        grid-area: headerArea;
     }
 
     #mainGrid {
-        text-align: center;
-        color: white;
-
+        grid-area: mainArea;
     }
 
     #footerGrid {
-        text-align: center;
-        color: white;
+        grid-area: footerArea;
     }
+
+    /*-----------------------------------------------------*/
+    /*----------------------MENU BAR-----------------------*/
+    /*-----------------------------------------------------*/
+
+    #menuBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+        padding: 0 1rem 0 1rem;
+        background-color: gray;
+    }
+
+    #logoMenu {
+        width: 5rem;
+    }
+
+    #listMenu {
+        height: 0;
+        display: block;
+        width: 100%;
+        position: absolute;
+        background-color: gray;
+        top: 60px;
+        /*distancia do container  da lista e do container do menu*/
+        right: 0;
+        z-index: 1000px;
+        /*para garantir que o menu vai ficar por cima te tudo*/
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #navMenu.active #listMenu {
+        height: calc(96vh - 60px);
+        /*calcula o Top do position de #listMenu para evitar scrol desnecessarios*/
+        /*tem que ser a mesma distancia do Top do listMenu */
+        visibility: visible;
+        overflow-y: auto;
+        /* pra caso tenha muitos intens, quando aberto ele vai criar um scroll*/
+    }
+
+    #btnMenu {
+        display: block;
+        width: 3rem;
+    }
+
+    /*-----------------------------------------------------*/
+    /*-----------------------------------------------------*/
+    /*-----------------------------------------------------*/
 }
