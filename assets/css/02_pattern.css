@@ -46,7 +46,7 @@ body {
     align-items: center;
     height: 8vh;
     padding: 0 1rem 0 1rem;
-    background-color: gray;
+    background-color: rgb(40, 39, 39);
 }
 
 #logoMenu {
