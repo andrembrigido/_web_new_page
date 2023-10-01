@@ -3,4 +3,94 @@
 /*-----------------------------------------------------*/
 @media screen and (max-width:576px)
 /*smartphones*/
-{}
+{
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /*-----------------------------------------------------*/
+    /*---------------------GRID SECTION--------------------*/
+    /*-----------------------------------------------------*/
+    #bodyGrid {
+        display: grid;
+        grid-template-areas:
+            "headerArea"
+            "mainArea"
+            "footerArea";
+    }
+
+    #headerGrid {
+        grid-area: headerArea;
+    }
+
+    #mainGrid {
+        grid-area: mainArea;
+    }
+
+    #footerGrid {
+        grid-area: footerArea;
+    }
+
+    /*-----------------------------------------------------*/
+    /*----------------------MENU BAR-----------------------*/
+    /*-----------------------------------------------------*/
+
+    #menuBar {
+        height: 8vh;
+        background-color: rgb(40, 39, 39);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+    }
+
+    #logoMenu {
+        width: 5rem;
+    }
+
+    #listMenu {
+        height: 0;
+        background-color: rgb(40, 39, 39);
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 8vh;
+        /*distancia do container  da lista e do container do menu*/
+        right: 0;
+        z-index: 1000px;
+        /*para garantir que o menu vai ficar por cima te tudo*/
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #navMenu.active #listMenu {
+        height: calc(96vh - 8vh);
+        /*calcula o Top do position de #listMenu para evitar scrol desnecessarios*/
+        /*tem que ser a mesma distancia do Top do listMenu */
+        visibility: visible;
+        overflow-y: auto;
+        /* pra caso tenha muitos intens, quando aberto ele vai criar um scroll*/
+    }
+
+    #btnMenu {
+        display: block;
+        width: 3rem;
+    }
+    /*-----------------------------------------------------*/
+    /*----------------------MENU BAR-----------------------*/
+    /*-----------------------------------------------------*/
+    #mainBar{
+        height: 88vh;
+        background-color: rgb(40, 39, 39);
+    }
+    /*-----------------------------------------------------*/
+    /*--------------------FOOTER BAR-----------------------*/
+    /*-----------------------------------------------------*/
+    #footerBar{
+        height: 4vh;
+        background-color: rgb(40, 39, 39);
+    }
+}
